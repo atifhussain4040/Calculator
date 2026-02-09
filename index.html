@@ -69,13 +69,17 @@ function showFinalScreen() {
           src="https://lottie.host/29778611-89c7-487b-ac7a-df39ec8d7564/TjkyjEUMJG.lottie"
           style="width:300px;height:300px"
           autoplay
-          loop
         ></dotlottie-wc>
 
         <h1>Welcome 🎉</h1>
+        <p>Opening Calculator...</p>
     </div>
     `;
-    
+
+    // ⏱ wait for animation then redirect
+    setTimeout(() => {
+        window.location.replace("calculator.html");
+    }, 4000); // change time if you want
 }
 
 for (let i = 0; i < list.length; i++) {
@@ -91,4 +95,5 @@ for (let i = 0; i < list.length; i++) {
 </script>
 
 </body>
+
 </html>
