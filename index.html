@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: beige;
+        }
+        .loading {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* added: center horizontally */
+        }
+    </style>
+</head>
+<body>  
+    <div class="loading">
+      <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+  type="module"
+></script>
+
+<dotlottie-wc
+  src="https://lottie.host/fdb8fe7c-063a-4517-846c-bf45a963e40f/t4sjt1hWFF.lottie"
+  style="width: 300px;height: 300px"
+  autoplay
+  loop
+></dotlottie-wc>
+<p id="Text"></p>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+    <dotlottie-wc src="https://lottie.host/a4c203e9-5312-4071-b29b-73a9da6526ba/IF7apRgVbI.lottie" style="width: 150px;height: 150px" autoplay loop></dotlottie-wc>
+    </div>
+   <script>
+const p = document.querySelector("#Text");
+const body = document.querySelector("body");
+
+const list = [
+"Using Quantum Computing Algorithm",
+"Consulting Elon Musk",
+"Hacking NASA Satellite",
+"Analyzing with Machine Learning",
+"Taking Donald Trump's Order",
+"Contacting PM of India",
+"Getting Signature From Shobhit Singh"
+];
+
+function showFinalScreen() {
+    body.innerHTML = `
+    <div class="loading">
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"><\/script>
+
+        <dotlottie-wc
+          src="https://lottie.host/29778611-89c7-487b-ac7a-df39ec8d7564/TjkyjEUMJG.lottie"
+          style="width:300px;height:300px"
+          autoplay
+          loop
+        ></dotlottie-wc>
+
+        <h1>Welcome 🎉</h1>
+    </div>
+    `;
+    
+}
+
+for (let i = 0; i < list.length; i++) {
+    setTimeout(() => {
+        p.innerText = list[i];
+
+        if (i === list.length - 1) {
+            setTimeout(showFinalScreen, 2000);
+        }
+
+    }, i * 2000);
+}
+</script>
+
+</body>
+</html>
